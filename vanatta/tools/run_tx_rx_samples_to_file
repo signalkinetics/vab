@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ../rx_outputs/River\ PAB2\ Van\ Atta\ 12-22-2022
+./../../build/rx_tx_samples_to_file \
+    --args "addr0=192.168.10.2" \
+    --tx-file "../../tx_outputs/baseband_fm0_625packets_0,5kbps_Npreamblebits=8_Ndatabits=16.dat" \
+    --rx-file "dummy.dat" \
+    --nsamps 7000000 --tx-rate 200000 --rx-rate 200000 --settling 5 \
+    --tx-channels "0" --rx-channels "0" --rx-subdev "A:AB"

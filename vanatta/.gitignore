@@ -1,0 +1,10 @@
+*_outputs/*
+*.asv
+*.png
+impedance/*
+.DS_Store
+.vscode
+*.mat
+build
+*.fig
+*.svg

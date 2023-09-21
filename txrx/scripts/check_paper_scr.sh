@@ -1,0 +1,1 @@
+echo -n "10 20 30 40 50 60" | xargs -d ' ' -I{} -P8 sh -c 'python3 check_paper.py $1 --volt 40 --bps 1000 > check_single_$1m_40Vrms_1kbps.txt' -- {}

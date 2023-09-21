@@ -1,0 +1,8 @@
+#!/bin/bash
+pwd
+./../vanatta/build/rx_tx_samples_to_file \
+    --args "addr0=192.168.10.2" \
+    --tx-file $1 \
+    --rx-file $2 \
+    --nsamps $3 --tx-rate 200000 --rx-rate 200000 --settling 5 \
+    --tx-channels "0" --rx-channels "0" --rx-subdev "A:AB"

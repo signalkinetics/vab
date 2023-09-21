@@ -1,0 +1,34 @@
+#!/bin/bash
+dist=90
+volt=43
+trial=1
+#rx_name="fixed_vanatta4x2_nostag_006B_006F_006A_006C_x_001A_004A_004B_004D_chest_txfmr_nicktb_siggen_18,5kfc_0,0deg_8bit_pre_16bit_dat_prbs_0,5kbps_usrp_2,5m_depth_005B_purui_tx_93Vrms_22m_22m_1m_foam_sep_purui_rx_1.dat"
+rx_name="../vanatta/rx_outputs/River_PAB2_Van_Atta_01-11-2023/fixed_vanatta4x2_nostag_006B_006F_006A_006C_x_001A_004A_004B_004D_txfmr_nicktb_18,5kfc_0,0deg_8bit_pre_16bit_dat_prbs_0,5kbps_usrp_2,5m_depth_005B_purui_tx_${volt}Vrms_${dist}m_${dist}m_1m_2foam_sep_purui_rx_${trial}.dat"
+rx_lb_name="dummy.dat"
+<<<<<<< HEAD
+tx_name="../../../tx_outputs/msk_data_fs=2e5_dr=500_nbits=10k.dat"
+nsamps=7000000
+
+sleep 1
+
+# ssh prwang@192.168.10.98 \
+cd pyaudio_test
+./pcie_speed.sh
+./../vanatta/tools/run_tx_samples $tx_name $rx_lb_name $nsamps & 
+python jack_record.py --n 7 --nsamps $nsamps $rx_name"
+
+=======
+tx_name="../vanatta/tx_outputs/msk_data_fs=2e5_dr=500_nbits=10k.dat"
+nsamps=7000000
+
+# rx_name="../vanatta/rx_outputs/dummy.dat"
+
+# ssh prwang@192.168.10.98 \
+cd ~/pyaudio_test
+./pcie_speed.sh
+./../vanatta/tools/run_tx_samples $tx_name $rx_lb_name $nsamps & 
+python jack_record.py --n 7 --nsamps $nsamps $rx_name
+
+>>>>>>> efbdb9aa775bcefee1393b7b8fb91daecde35776
+# cd ../rx_outputs/River\ PAB2\ Van\ Atta\ 01-10-2023/
+# wget localhost:8000/$rx_name

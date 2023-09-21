@@ -1,0 +1,6 @@
+*.asv
+*.so
+__pycache__
+*.fig
+*.svg
+*.vscode

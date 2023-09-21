@@ -1,0 +1,6 @@
+#!/bin/bash
+./../../autorotator/build/autorotator --exec "cd ../rx_outputs/River\ PAB2\ Van\ Atta\ 12-20-2022/ && \
+./../../build/rx_tx_samples_to_file --args 'addr0=192.168.10.2, addr1=192.168.10.5' \
+--tx-file '../../tx_outputs/baseband_fm0_625packets_0,5kbps_Npreamblebits=8_Ndatabits=16.dat' \
+--rx-file 'fixed_vanatta4x2_nostag_006B_006F_006A_006C_x_001A_004A_004B_004D_chest_txfmr_nicktb_siggen_18,5kfc_?deg_8bit_pre_16bit_dat_prbs_0,5kbps_usrp_2,5m_depth_005B_purui_tx_60Vrms_11m_10m_hphydro_diff_0.dat' \
+--nsamps 7000000 --tx-rate 200000 --rx-rate 200000 --settling 5 --tx-channels '0' --rx-channels '0,1' --rx-subdev 'A:AB'" --start-angle -90 --end-angle 91 --step 5 
