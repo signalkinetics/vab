@@ -19,10 +19,9 @@ We present the design, implementation, and evaluation of Van Atta Acoustic Backs
 
 The repository is organized into the components that make up a full experimental VAB system:
 
-- **Van Atta Array** (`vanatta`): Contains the switching PCB designs and simulation tools for a Van Atta array.
-- **Transmitter / Reader** (`txrx`): Contains the hardware design files and source code for the transmit and receive pipelines in VAB, including the core multichannel DFE implementation. This system is an integrated hardware platform and thus is grouped into one folder. 
+- **Van Atta Array** (`vanatta`): Contains the simulation tools for a Van Atta array.
+- **Transmitter / Reader** (`txrx`): Contains the source code for the transmit and receive pipelines in VAB, including the core multichannel DFE implementation. 
 - **Piezoelectric Nodes** (`node`): Contains 3D models and hardware design files for the piezoelectric node manufacturing process. These nodes are used in the transmitter and the Van Atta array. 
-- **Autorotator** (`autorotator`): Contains the 3D models and source code for running the "autorotator", the device we used in the original VAB paper to evaluate the Van Atta array across rotations. 
 
 ### Datasets
 
@@ -38,4 +37,4 @@ The best immediate first step would be to reproduce the paper results from the d
 
 **Advisor/PI**: [Fadel Adib](http://www.mit.edu/~fadel/)
 
-**Paper**: TBD
+**Paper**: https://dl.acm.org/doi/10.1145/3603269.3604814
