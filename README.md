@@ -38,3 +38,25 @@ The best immediate first step would be to reproduce the paper results from the d
 **Advisor/PI**: [Fadel Adib](http://www.mit.edu/~fadel/)
 
 **Paper**: https://dl.acm.org/doi/10.1145/3603269.3604814
+
+Cite the paper using BibTex as follows:
+
+```
+@inproceedings{10.1145/3603269.3604814,
+author = {Eid, Aline and Rademacher, Jack and Akbar, Waleed and Wang, Purui and Allam, Ahmed and Adib, Fadel},
+title = {Enabling Long-Range Underwater Backscatter via Van Atta Acoustic Networks},
+year = {2023},
+isbn = {9798400702365},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3603269.3604814},
+doi = {10.1145/3603269.3604814},
+abstract = {We present the design, implementation, and evaluation of Van Atta Acoustic Backscatter (VAB), a technology that enables long-range, ultra-low-power networking in underwater environments. At the core of VAB is a novel, scalable underwater backscatter architecture that bridges recent advances in RF backscatter (Van Atta architectures) with ultra-low-power underwater acoustic networks. Our design introduces multiple innovations across the networking stack, which enable it to overcome unique challenges that arise from the electro-mechanical properties of underwater backscatter and the challenging nature of low-power underwater acoustic channels. We implemented our design in an end-to-end system, and evaluated it in over 1,500 real-world experimental trials in a river and the ocean. Our evaluation in stationary setups demonstrates that VAB achieves a communication range that exceeds 300m in round trip backscatter across orientations (at BER of 10−3). We compared our design head-to-head with past state-of-the-art systems, demonstrating a 15\texttimes{} improvement in communication range at the same throughput and power. By realizing hundreds of meters of range in underwater backscatter, this paper presents the first practical system capable of coastal monitoring applications. Finally, our evaluation represents the first experimental validation of underwater backscatter in the ocean.},
+booktitle = {Proceedings of the ACM SIGCOMM 2023 Conference},
+pages = {1–19},
+numpages = {19},
+keywords = {ocean IoT, underwater sensing, retrodirective structures, van atta, backscatter communications, piezo-acoustic backscatter},
+location = {New York, NY, USA},
+series = {ACM SIGCOMM '23}
+}
+```
