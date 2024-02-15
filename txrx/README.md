@@ -21,11 +21,20 @@ That is to say, if the transmitter does XOR precoding to modify the source befor
 3. Modulate with exp(-1j / SPB * pi / 2), this converts the OQPSK back to BPSK
 4. Feed to a vanilla BPSK DFE equalizer.
 
+# How to Compile
+The equalization operates on the square root of the covariance matrics, which is supported via C++/Eigen's Cholesky module. Therefore, the equalization needs to compile the underlying `linreg_mc.cpp` in order to function properly.
+
+Currently, the supported platform are Ubuntu 20.04 and 22.04, X86-64. (ARM machines, especially the Apple silicon Macs are not supported) On those machines you may
+```bash
+(cd src; make)
+```
+and the `linreg_mc.so` will be compiled, so the `equalization.py` can call it properly.
 
 # Code structure
 `` scfde.py`` single carrier frequency domain equalization
 
 `` equalization.py `` : Time domain equalization, accepts BPSK data or the preprocessed single-sideband MSK data from `msk.py`
+
 
 `` msk.py `` MSK half-sine match filter and whiten filter. The subcarrier is not maintained and should instead be handled by ``mixer_cfo`` in linregs.py. After the pre-processing it should become BPSK samples and handled by `equalization.py`. The Viterbi decoder was intended for single-tap channel and isn't useful/maintained. 
 
